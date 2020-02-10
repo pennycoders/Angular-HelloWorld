@@ -6,7 +6,10 @@ jobs:
   build:
 
     runs-on: self-hosted
-
+    container:
+      image: ubuntu:latest
+      env:
+        MIX_ENV: test
     steps:
     - uses: actions/checkout@v2
     - name: Run a one-line script
